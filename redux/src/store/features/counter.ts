@@ -13,7 +13,7 @@ export default function counterReducer(
   state = initialState,
   action: ReduxAction<number>
 ) {
-  const { type, payload } = action
+  const { type, payload = 1 } = action
   switch (type) {
     case INCREMENT:
       return { ...state, count: state.count + payload }

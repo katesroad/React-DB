@@ -42,11 +42,23 @@
   - Flow: Action -> **middleware** -> reducer -> state ->view -> dispatch -> Action
   - Explaintaion: Redux recuers must never contains _side effects_
 - [redux saga](https://redux-saga.js.org/)
-  - Working flow: Redux action dispatched from component -> "Watcher Saga"
+  - Working flow:
+    - Redux action dispatched from component -> "Watcher Saga" -> handler calls a function to make the request
+    - getUser -> watcher => handleGetUser => requestGetUser
 
 ### Test Redux
 
 ### Using Redux with Typescript
+
+- Define the **RootState** type in redux
+
+  - code:
+
+  ```ts
+  export type RootState = ReturnType<typeof store.getState>
+  ```
+
+  - Doc: https://redux.js.org/recipes/usage-with-typescript#define-root-state-and-dispatch-types
 
 ## References
 
@@ -68,3 +80,4 @@
 - Redux-saga:
   - Doc: https://redux-saga.js.org/
   - ES6 generator function: https://es6.ruanyifeng.com/#docs/generator
+  - Video tutorial: https://www.youtube.com/watch?v=1K26DIKt3w8

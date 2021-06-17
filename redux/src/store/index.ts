@@ -1,12 +1,14 @@
 import { applyMiddleware, combineReducers } from 'redux'
 import { createStore } from 'redux'
+import createSagaMiddleWare from 'redux-saga'
 import counterReducer, {
   initialState as counterState,
 } from './features/counter'
 import userReducer, { initialState as userState } from './features/user'
 import { logger } from './middlewares/logger'
 
-const middlewares = [logger]
+const sagaMiddleware = createSagaMiddleWare()
+const middlewares = [logger, sagaMiddleware]
 
 /**
  * createStore
@@ -19,5 +21,12 @@ const store = createStore(
   { counter: counterState, user: userState },
   applyMiddleware(...middlewares)
 )
+
+/**
+ * Define the RootState type
+ * Doc: https://redux.js.org/recipes/usage-with-typescript#define-root-state-and-dispatch-types
+ */
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
 
 export default store
