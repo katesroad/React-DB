@@ -10,7 +10,7 @@ export function fetchUser(): Promise<IUser | null> {
     .get('http://my-json-server.typicode.com/atothey/demo/user')
     .then((res) => res.data as IUser)
     .catch((e) => {
-      console.warn(e)
+      console.error(e)
       return null
     })
 }

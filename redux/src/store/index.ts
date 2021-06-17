@@ -6,6 +6,7 @@ import counterReducer, {
 } from './features/counter'
 import userReducer, { initialState as userState } from './features/user'
 import { logger } from './middlewares/logger'
+import { watcherSaga } from './sagas/rootSaga'
 
 const sagaMiddleware = createSagaMiddleWare()
 const middlewares = [logger, sagaMiddleware]
@@ -21,6 +22,8 @@ const store = createStore(
   { counter: counterState, user: userState },
   applyMiddleware(...middlewares)
 )
+
+sagaMiddleware.run(watcherSaga)
 
 /**
  * Define the RootState type
