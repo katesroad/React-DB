@@ -60,5 +60,10 @@
 ### Advanced Redux
 
 - Redux middleware to be explainained:
+
   - Official Doc: https://redux.js.org/tutorials/fundamentals/part-6-async-logic#redux-async-data-flow
   - Video Tutorial: https://www.youtube.com/watch?v=AgO7YcJeBh4
+
+- Redux-saga:
+  - Doc: https://redux-saga.js.org/
+  - ES6 generator function: https://es6.ruanyifeng.com/#docs/generator
