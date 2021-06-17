@@ -31,8 +31,14 @@
 
 ## Advanced
 
+### Redux Middleware
+
 - redux middleware
 - redux saga
+
+### Test Redux
+
+### Using Redux with Typescript
 
 ## References
 
