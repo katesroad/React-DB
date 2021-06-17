@@ -1,7 +1,15 @@
 import React from 'react'
+import Voter from 'components/Voter'
 
 function App() {
-  return <div className="App"></div>
+  const voters = ['John', 'Julian', 'Kate']
+  return (
+    <div>
+      {voters.map((name) => (
+        <Voter name={name} key={name} />
+      ))}
+    </div>
+  )
 }
 
 export default App

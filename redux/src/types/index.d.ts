@@ -1,5 +1,4 @@
-export interface IToDo {
-  title: string
-  id: number
-  completed: boolean
+export interface ReduxAction<T> {
+  type: string
+  payload: T
 }
