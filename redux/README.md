@@ -29,6 +29,11 @@
   - useSelector: to get computed value from centeral state
   - useDispatch: to get _dispatch_
 
+## Advanced
+
+- redux middleware
+- redux saga
+
 ## References
 
 - Redux: https://redux.js.org/
