@@ -7,7 +7,7 @@ export const increment = () => ({ type: INCREMENT })
 
 export const decrement = () => ({ type: DECREMENT })
 
-const initialState = { count: 0 }
+export const initialState = { count: 0 }
 
 export default function counterReducer(
   state = initialState,

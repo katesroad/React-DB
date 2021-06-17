@@ -42,6 +42,7 @@
   - Flow: Action -> **middleware** -> reducer -> state ->view -> dispatch -> Action
   - Explaintaion: Redux recuers must never contains _side effects_
 - [redux saga](https://redux-saga.js.org/)
+  - Working flow: Redux action dispatched from component -> "Watcher Saga"
 
 ### Test Redux
 
