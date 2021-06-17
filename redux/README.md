@@ -31,10 +31,17 @@
 
 ## Advanced
 
+- Concepts:
+  - [Side effect](<https://en.wikipedia.org/wiki/Side_effect_(computer_science)>)
+  - A Redux store doesn't know anything about async logic.
+  - **Redux middleware were designed to enable writing logic that has side effects. Redux reducers must never contain "side effects".**
+
 ### Redux Middleware
 
 - redux middleware
-- redux saga
+  - Flow: Action -> **middleware** -> reducer -> state ->view -> dispatch -> Action
+  - Explaintaion: Redux recuers must never contains _side effects_
+- [redux saga](https://redux-saga.js.org/)
 
 ### Test Redux
 
@@ -42,8 +49,16 @@
 
 ## References
 
+### Redux fundamentals
+
 - Redux: https://redux.js.org/
 - React-Redux: https://react-redux.js.org/
 - Duck Pattern: https://github.com/erikras/ducks-modular-redux
 - State, Action and View in Vuex:https://vuex.vuejs.org/#what-is-a-state-management-pattern
 - Redux Intro for beginer: https://www.youtube.com/watch?v=wcXTCG8zMhY
+
+### Advanced Redux
+
+- Redux middleware to be explainained:
+  - Official Doc: https://redux.js.org/tutorials/fundamentals/part-6-async-logic#redux-async-data-flow
+  - Video Tutorial: https://www.youtube.com/watch?v=AgO7YcJeBh4
