@@ -48,6 +48,9 @@
 
 ### Test Redux
 
+- Test Redux: https://redux.js.org/recipes/writing-tests
+- Test Redux-Saga: https://redux-saga.js.org/docs/advanced/Testing
+
 ### Using Redux with Typescript
 
 - Define the **RootState** type in redux
