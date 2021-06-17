@@ -1,15 +1,12 @@
-import { AnyAction, applyMiddleware, combineReducers, Dispatch } from 'redux'
+import { applyMiddleware, combineReducers } from 'redux'
 import { createStore } from 'redux'
 import counterReducer, {
   initialState as counterState,
 } from './features/counter'
 import userReducer, { initialState as userState } from './features/user'
+import { logger } from './middlewares/logger'
 
-const myLogger =
-  (store: any) => (next: Dispatch<AnyAction>) => (action: any) => {
-    console.log('log action:', action)
-    next(action)
-  }
+const middlewares = [logger]
 
 /**
  * createStore
@@ -20,7 +17,7 @@ const myLogger =
 const store = createStore(
   combineReducers({ counter: counterReducer, user: userReducer }),
   { counter: counterState, user: userState },
-  applyMiddleware(myLogger)
+  applyMiddleware(...middlewares)
 )
 
 export default store
