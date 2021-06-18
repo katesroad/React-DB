@@ -49,6 +49,12 @@
 ### Test Redux
 
 - Test Redux: https://redux.js.org/recipes/writing-tests
+  - Testing categories
+    - action creator: https://redux.js.org/recipes/writing-tests#action-creators
+    - reducer: https://redux.js.org/recipes/writing-tests#reducers
+    - components: https://redux.js.org/recipes/writing-tests#components
+    - midlleware: https://redux.js.org/recipes/writing-tests#middleware
+  - Data faker: https://www.npmjs.com/package/faker
 - Test Redux-Saga: https://redux-saga.js.org/docs/advanced/Testing
 
 ### Using Redux with Typescript
