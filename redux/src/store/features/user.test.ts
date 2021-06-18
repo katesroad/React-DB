@@ -1,4 +1,10 @@
-import { SET_USER, GET_USER, getUser, setUser } from './user'
+import userReducer, {
+  SET_USER,
+  GET_USER,
+  getUser,
+  setUser,
+  initialState,
+} from './user'
 import faker from 'faker'
 
 describe('action creator', () => {
@@ -13,5 +19,28 @@ describe('action creator', () => {
       lastName: faker.name.lastName(0),
     }
     expect(setUser(user)).toEqual({ type: SET_USER, payload: user })
+  })
+})
+
+describe('userReducer', () => {
+  const user = {
+    id: Math.floor(Math.random() * 100),
+    firstName: faker.name.firstName(1),
+    lastName: faker.name.lastName(0),
+  }
+
+  it('setUser action', () => {
+    expect(userReducer(initialState, setUser(user))).toEqual({ user })
+  })
+
+  it('other action types', () => {
+    const anotherUser = {
+      id: Math.floor(Math.random() * 100),
+      firstName: faker.name.firstName(1),
+      lastName: faker.name.lastName(0),
+    }
+    expect(
+      userReducer({ user: anotherUser }, { type: 'unknown', payload: user })
+    ).toEqual({ user: anotherUser })
   })
 })
