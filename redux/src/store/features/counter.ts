@@ -1,10 +1,9 @@
 import { ReduxAction } from 'types'
 
-const INCREMENT = 'increment'
-const DECREMENT = 'decrement'
+export const INCREMENT = 'INCREMENT'
+export const DECREMENT = 'DECREMENT'
 
 export const increment = () => ({ type: INCREMENT })
-
 export const decrement = () => ({ type: DECREMENT })
 
 export const initialState = { count: 0 }
