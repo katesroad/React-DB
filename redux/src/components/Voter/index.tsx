@@ -9,13 +9,13 @@ const Voter: React.FC<{ name: string }> = ({ name }) => {
   const [votes, setVotes] = React.useState(0)
 
   const handleIncrement = () => {
-    dispatch(increment())
+    dispatch(increment(1))
     setVotes(votes + 1)
     return false
   }
   const handleDecrement = () => {
     if (votes - 1 >= 0) {
-      dispatch(decrement())
+      dispatch(decrement(1))
       setVotes(votes - 1)
     }
     return false
