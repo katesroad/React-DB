@@ -5,6 +5,7 @@ import counterReducer, {
   initialState as counterState,
 } from './features/counter'
 import userReducer, { initialState as userState } from './features/user'
+import appReducer, { initialState as appState } from './features/app'
 import { logger } from './middlewares/logger'
 import { watcherSaga } from './sagas/rootSaga'
 
@@ -18,8 +19,16 @@ const middlewares = [logger, sagaMiddleware]
  * >3. middlewares
  */
 const store = createStore(
-  combineReducers({ counter: counterReducer, user: userReducer }),
-  { counter: counterState, user: userState },
+  combineReducers({
+    counter: counterReducer,
+    user: userReducer,
+    app: appReducer,
+  }),
+  {
+    counter: counterState,
+    user: userState,
+    app: appState,
+  },
   applyMiddleware(...middlewares)
 )
 

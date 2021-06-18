@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render <App /> 1`] = `
+<div>
+  <div>
+    <div
+      class="heading"
+    >
+      <h2>
+        Votes for
+        <span>
+          loading...
+        </span>
+      </h2>
+      <p>
+        <strong>
+          Total votes:
+        </strong>
+         
+        0
+         votes
+      </p>
+    </div>
+    <ul>
+      <li>
+        <div
+          class="sc-bdnxRM edcOPF"
+        >
+          <h2>
+             
+            John
+             
+          </h2>
+          <h3>
+             
+            Votes: 0
+             
+          </h3>
+          <div>
+            <button
+              class="sc-gtsrHT jPIbuq"
+            >
+               Increment 
+            </button>
+            <button
+              class="sc-gtsrHT jPIbuq"
+              disabled=""
+            >
+              Decrement
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-bdnxRM edcOPF"
+        >
+          <h2>
+             
+            Julian
+             
+          </h2>
+          <h3>
+             
+            Votes: 0
+             
+          </h3>
+          <div>
+            <button
+              class="sc-gtsrHT jPIbuq"
+            >
+               Increment 
+            </button>
+            <button
+              class="sc-gtsrHT jPIbuq"
+              disabled=""
+            >
+              Decrement
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div
+          class="sc-bdnxRM edcOPF"
+        >
+          <h2>
+             
+            Kate
+             
+          </h2>
+          <h3>
+             
+            Votes: 0
+             
+          </h3>
+          <div>
+            <button
+              class="sc-gtsrHT jPIbuq"
+            >
+               Increment 
+            </button>
+            <button
+              class="sc-gtsrHT jPIbuq"
+              disabled=""
+            >
+              Decrement
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

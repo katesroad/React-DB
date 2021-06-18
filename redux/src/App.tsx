@@ -8,6 +8,7 @@ function App() {
   const voters = ['John', 'Julian', 'Kate']
   const votes = useSelector((state: RootState) => state?.counter?.count || 0)
   const user = useSelector((state: RootState) => state?.user?.user)
+  const { isLoading, isSuccess } = useSelector((state: RootState) => state?.app)
 
   const dispatch = useDispatch()
   React.useEffect(() => {
@@ -17,7 +18,14 @@ function App() {
   return (
     <div>
       <div className="heading">
-        <h2> Votes for: {user?.firstName + ',' + user?.lastName}</h2>
+        <h2>
+          Votes for
+          {isLoading ? (
+            <span>loading...</span>
+          ) : isSuccess ? (
+            <span>{' ' + user?.lastName}</span>
+          ) : null}
+        </h2>
         <p>
           <strong>Total votes:</strong> {votes} votes
         </p>
