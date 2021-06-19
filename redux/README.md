@@ -2,8 +2,8 @@
 
 ## Fundamentals
 
-- What problem dose Redux solve?
-  To solve the problem of accessing application state across components horitanally and vertically ---> makes our code look messy.
+- What problem does Redux solve?
+  To solve the problem of accessing application state across components horizontally and vertically ---> makes our code look messy.
 
 - How Redux works
 
@@ -14,12 +14,12 @@
       action -> reducer - state (Comparation with Vuex needed)
   - Comparation with Vuex: https://vuex.vuejs.org/#what-is-a-state-management-pattern
 
-- Ducks pattern(A best file structure for using Redux)
+- Ducks pattern(The best file structure for using Redux)
 
-  - What is it?: To store corresponding state code at the single place and seperate state from components so that all the component can access the state in the same way.
+  - What is it?: To store corresponding state code in a single place and separate state from components so that all the components can access the state in the same way.
   - Goal: Makes our component to be much cleaner
-  - State code is more readble and maintainable
-  - Idea: to store actions, reducers and the state in a single file
+  - State code is more readable and maintainable
+  - Idea: to store actions, reducers, and the state in a single file
   - Doc: https://github.com/erikras/ducks-modular-redux
 
 * React-Redux
@@ -34,7 +34,7 @@
 - Concepts:
   - [Side effect](<https://en.wikipedia.org/wiki/Side_effect_(computer_science)>)
   - A Redux store doesn't know anything about async logic.
-  - **Redux middleware were designed to enable writing logic that has side effects. Redux reducers must never contain "side effects".**
+  - **Redux middleware was designed to enable writing logic that has side effects. Redux reducers must never contain "side effects."**
 
 ### Redux Middleware
 
@@ -77,11 +77,11 @@
 - React-Redux: https://react-redux.js.org/
 - Duck Pattern: https://github.com/erikras/ducks-modular-redux
 - State, Action and View in Vuex:https://vuex.vuejs.org/#what-is-a-state-management-pattern
-- Redux Intro for beginer: https://www.youtube.com/watch?v=wcXTCG8zMhY
+- Redux Intro for beginner: https://www.youtube.com/watch?v=wcXTCG8zMhY
 
 ### Advanced Redux
 
-- Redux middleware to be explainained:
+- Redux middleware to be explained:
 
   - Official Doc: https://redux.js.org/tutorials/fundamentals/part-6-async-logic#redux-async-data-flow
   - Video Tutorial: https://www.youtube.com/watch?v=AgO7YcJeBh4
