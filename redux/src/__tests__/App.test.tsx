@@ -55,7 +55,6 @@ test('Render <App />', async () => {
       name: /increment/i,
     })
   )
-
   userEvent.click(
     within(screen.getByLabelText('voter-Kate')).getByRole('button', {
       name: /increment/i,
@@ -64,7 +63,7 @@ test('Render <App />', async () => {
   expect(
     screen.getByLabelText('total-votes').textContent
   ).toMatchInlineSnapshot(`"4 votes"`)
-
+  // third user did down votes
   userEvent.click(
     within(screen.getByLabelText('voter-Kate')).getByRole('button', {
       name: /decrement/i,
