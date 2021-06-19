@@ -3,16 +3,16 @@
 ## Fundamentals
 
 - What problem does Redux solve?
-  To solve the problem of accessing application state across components horizontally and vertically ---> makes our code look messy.
+  To solve the problem of accessing application state across components horizontally and vertically -> makes our code look messy.
 
 - How Redux works
 
   - Idea:
     - action (dispatch action)
-    - reducer( reducer gives back a new state based on action)
+    - reducer( reducer gives back a new state based on the action)
     - state(state gets updated by reducer function)
       action -> reducer - state (Comparation with Vuex needed)
-  - Comparation with Vuex: https://vuex.vuejs.org/#what-is-a-state-management-pattern
+  - Comparison with Vuex: https://vuex.vuejs.org/#what-is-a-state-management-pattern
 
 - Ducks pattern(The best file structure for using Redux)
 
@@ -26,12 +26,12 @@
 
   - Goal: to access global state inside a component
   - Doc: https://react-redux.js.org/introduction/getting-started
-  - useSelector: to get computed value from centeral state
+  - useSelector: to get computed value from the central state
   - useDispatch: to get _dispatch_
 
 ## Advanced
 
-- Concepts:
+### Concepts:
   - [Side effect](<https://en.wikipedia.org/wiki/Side_effect_(computer_science)>)
   - A Redux store doesn't know anything about async logic.
   - **Redux middleware was designed to enable writing logic that has side effects. Redux reducers must never contain "side effects."**
